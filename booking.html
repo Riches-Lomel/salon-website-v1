@@ -1,1 +1,129 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book an Appointment</title>
+  <link rel="stylesheet" href="style.css"> <!-- if you have one -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #fff0f5;
+    }
+    h1 {
+      color: #5d001e;
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #5d001e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #7a0030;
+    }
+  </style>
+</head>
+<body>
+
+  <nav style="background-color: #5d001e; padding: 15px; text-align: center;">
+    <a href="index.html" style="color: white; margin: 0 15px;">Home</a>
+    <a href="services.html" style="color: white; margin: 0 15px;">Services</a>
+    <a href="products.html" style="color: white; margin: 0 15px;">Products</a>
+  </nav>
+
+  <h1>Book an Appointment</h1>
+<p style="text-align: center; font-style: italic; color: #5d001e; margin-top: -10px;">
+  Where confidence meets style — for all hair types and all identities.
+</p>
+
+  <form>
+  <div style="position: relative; max-width: 500px; margin: auto;">
+  
+  <div style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: #e8dce1;
+    font-weight: bold;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.1;
+    text-align: center;
+  ">
+    ULTIMATE<br>UNISEX
+  </div>
+
  
+  <form style="
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    position: relative;
+    z-index: 1;
+  ">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required placeholder="e.g. Vera Gyabeng">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" placeholder="e.g. 0545715677" required>
+
+    <label for="service">Select Service:</label>
+    <select id="service" required>
+      <option value="">--Choose--</option>
+      <option>Braiding</option>
+      <option>Weavon</option>
+      <option>Wig Installation</option>
+      <option>Acrylic</option>
+      <option>Knotless Braids</option>
+      <option>Hair Dying</option>
+      <option>Eye Lashes</option>
+    </select>
+
+    <label for="date">Choose Date:</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Choose Time:</label>
+    <input type="time" id="time" required>
+
+    <label for="notes">Additional Notes (optional):</label>
+    <textarea id="notes" rows="4" placeholder="Any specific requests or instructions?"></textarea>
+
+    <button type="submit">Submit Booking</button>
+  </form>
+</div>
+<section id="contact" style="background-color: #fff0f5; padding: 40px 20px; text-align: center;">
+  <h2 style="color: #5d001e;">Contact Us</h2>
+  <p style="margin-bottom: 10px;">📍 Location: Sarbah Annex A, Legon</p>
+  <p>📞 Phone: 054 198 6665/ 020 363 6573 | ✉️ Email: info@ultimateunisex.com</p>
+
+
+</body>
+</html>
