@@ -49,6 +49,15 @@ app.post('/api/bookings', (req, res) => {
         }
     });
 });
+app.get('/api/bookings', (req, res) => {
+    db.all('SELECT * FROM bookings ORDER BY id DESC', [], (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: 'Failed to fetch bookings' });
+        } else {
+            res.json(rows);
+        }
+    });
+});
 
 app.get('/', (req, res) => {
     res.send('Salon booking backend is live!');
