@@ -22,6 +22,11 @@ const db = new sqlite3.Database(dbPath, (err) => {
     }
 });
 
+// Add error handling for database connection
+db.on('error', (err) => {
+    console.error('Database error:', err);
+});
+
 db.run(`CREATE TABLE IF NOT EXISTS bookings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -48,6 +53,7 @@ app.post('/api/bookings', (req, res) => {
             res.status(200).json({ message: 'Booking saved successfully', id: this.lastID });
         }
     });
+    stmt.finalize(); // Ensure statement is finalized
 });
 app.get('/api/bookings', (req, res) => {
     db.all('SELECT * FROM bookings ORDER BY id DESC', [], (err, rows) => {
